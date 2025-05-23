@@ -1,54 +1,89 @@
-# React + TypeScript + Vite
+# SearchAnyMeaning
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, minimal React + TypeScript web app for looking up word meanings, built with Vite and Tailwind CSS.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔍 Search for the meaning of any word or phrase
+- ⚡ Fast, responsive UI with React 19 and Tailwind CSS 4
+- 🎨 Clean, accessible design
+- 📚 Results include definitions, and support for synonyms, examples, and part of speech (if available)
+- 🌐 Powered by [searchanymeaning.onrender.com](https://searchanymeaning.onrender.com) API
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerequisites
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- [Node.js](https://nodejs.org/) (v18 or newer recommended)
+- [npm](https://www.npmjs.com/) or [yarn](https://yarnpkg.com/)
+
+### Installation
+
+```sh
+git clone https://github.com/yourusername/searchfrontend.git
+cd searchfrontend
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Development
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Start the development server:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm run dev
 ```
+
+Open [http://localhost:5173](http://localhost:5173) in your browser.
+
+### Build
+
+To build for production:
+
+```sh
+npm run build
+```
+
+To preview the production build:
+
+```sh
+npm run preview
+```
+
+### Lint
+
+To lint the codebase:
+
+```sh
+npm run lint
+```
+
+## Project Structure
+
+```
+src/
+  App.tsx                # Main app component
+  main.tsx               # Entry point
+  index.css              # Tailwind and custom styles
+  components/
+    dictionary-lookup.tsx  # Dictionary search UI
+public/
+  vite.svg               # Favicon
+```
+
+## Configuration
+
+- **Vite** for fast bundling and HMR ([vite.config.ts](vite.config.ts))
+- **TypeScript** strict mode ([tsconfig.app.json](tsconfig.app.json))
+- **ESLint** for code quality ([eslint.config.js](eslint.config.js))
+- **Tailwind CSS** for utility-first styling
+
+## Credits
+
+- [Lucide Icons](https://lucide.dev/) for UI icons
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Vite](https://vitejs.dev/)
+- [React](https://react.dev/)
+
+---
+
+MIT License
